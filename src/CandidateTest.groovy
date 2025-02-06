@@ -4,16 +4,16 @@ import org.junit.jupiter.api.Test
 import static org.junit.jupiter.api.Assertions.assertEquals
 
 class CandidateTest {
-    Candidate kevin
+    Candidate johann
 
     @BeforeEach
     void setUp() {
-        kevin = new Candidate("kevin", "keuwey@gmail.com", "08926607593", (short)23, "BA", "40252-005", "Fullstack java developer", ["java", "angular", "python", "groovy"])
+        johann = new Candidate("Johann", "johann.packer@gmail.com", "08936601993", 26, "NY", "40252-005", "Fullstack java developer", ["java", "angular", "python", "groovy"])
     }
 
     @Test
     void testCandidatePersonalID() {
-        String expectedID = "08926607593"
-        assertEquals(expectedID, kevin.personalID)
+        String expectedID = "08936601993"
+        assertEquals(expectedID, johann.personalID)
     }
 }
