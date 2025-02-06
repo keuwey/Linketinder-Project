@@ -6,6 +6,15 @@ abstract class AbstractPerson {
     String description
     List<String> skills = []
 
+    AbstractPerson(String name, String email, String state, String zipCode, String description, List<String> skills) {
+        this.name = name
+        this.email = email
+        this.state = state
+        this.zipCode = zipCode
+        this.description = description ?: ""
+        this.skills = skills
+    }
+
     String getName() {
         return name
     }
