@@ -41,8 +41,7 @@ export class ChartManager {
 		}, {} as Record<string, number>);
 
 		this.chart.data.labels = Object.keys(skillCounts);
-		//this.chart.data.datasets[0].data = Object.values(skillCounts);
-		console.log(Object);
-		//this.chart.update();
+		this.chart.data.datasets[0].data = Object.values(skillCounts);
+		this.chart.update();
 	}
 }
