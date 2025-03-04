@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #ecf0f1;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.nav-link {
+    color: var(--primary-color);
+}
+
+.card {
+    transition: transform 0.2s;
+    background-color: var(--accent-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.chart-container {
+    height: 400px;
+    margin: 2rem 0;
+}
+
+.skill-tag {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    margin: 0.25rem;
+    display: inline-block;
+}
+
+.hover-info {
+    position: relative;
+    cursor: pointer;
+}
+
+.hover-info:hover::after {
+    content: attr(data-info);
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
