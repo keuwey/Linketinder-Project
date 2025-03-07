@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linketinder</title>
-    <link href="./bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container">
-        <a class="navbar-brand" href="#">Linketinder</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#candidate-register">Candidate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#company-register">Company</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Linketinder</title>
+		<link href="./bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container">
+				<a class="navbar-brand" href="#">Linketinder</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#candidate-register">Candidate</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#company-register">Company</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-    <!-- Candidate Registration -->
-    <section id="candidate-register" class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card shadow">
-            <div class="card-header bg-primary text-white">
-              <h3>Candidate Registration</h3>
-            </div>
-            <div class="card-body">
-              <form id="candidateForm">
-                <!-- Form fields -->
-                <div class="mb-3">
-                  <label class="form-label">Full Name</label>
-                  <input type="text" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                  <label class="form-label">Skills (comma separated)</label>
-                  <input type="text" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Candidate Registration -->
+		<section id="candidate-register" class="container py-5">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="card shadow">
+						<div class="card-header bg-primary text-white">
+							<h3>Candidate Registration</h3>
+						</div>
+						<div class="card-body">
+							<form id="candidateForm">
+								<!-- Form fields -->
+								<div class="mb-3">
+									<label class="form-label">Full Name</label>
+									<input type="text" name="name" class="form-control" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label">Skills (comma separated)</label>
+									<input type="text" name="skills" class="form-control" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label">Education (comma separated)</label>
+									<input type="text" name="education" class="form-control" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label">Experience (comma separated)</label>
+									<input type="text" name="experience" class="form-control" required />
+								</div>
+								<button type="submit" class="btn btn-primary">Register</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Company Profile -->
-    <section id="company-profile" class="container py-5">
-      <h2 class="mb-4">Company Dashboard</h2>
+		<!-- Company Profile -->
+		<section id="company-profile" class="container py-5">
+			<h2 class="mb-4">Company Dashboard</h2>
 
-      <!-- Skills Chart -->
-      <div class="chart-container">
-        <canvas id="skillsChart"></canvas>
-      </div>
-
-      <!-- Candidates List -->
-      <div class="row">
-        <div class="col-md-4 hover-info" data-info="Education: Computer Science | Experience: 5 years"
-             onmouseover="showCandidateInfo(this)">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h5 class="card-title">Candidate #123</h5>
-              <div class="skills">
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">Python</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- More candidate cards -->
-      </div>
-    </section>
-
-    <script type="module" src="./dist/charts.js"></script>
-    <script type="module" src="./dist/interfaces.js"></script>
-    <script type="module" src="./dist/main.js"></script>
-    <script type="module" src="./dist/navigation.js"></script>
-    <script type="module" src="./dist/storage.js"></script>
-    <script type="module" src="./dist/ui.js"></script>
-  </body>
+			<!-- Candidates List -->
+			<div class="row">
+				<!-- Os candidatos serão adicionados dinamicamente aqui -->
+			</div>
+		</section>
+		<script type="module" src="./dist/main.js"></script>
+	</body>
 </html>
